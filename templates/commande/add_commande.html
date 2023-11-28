@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+
+{% block contenu %}
+<!-- csrf_token : crypter les infos pour qu'il soit proteger -->
+<div class="row" >
+    <div class="col-md-6" >
+        <div class="card card-body" >
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form}}
+                <input type="submit" name = "Envoyer" />
+            
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
